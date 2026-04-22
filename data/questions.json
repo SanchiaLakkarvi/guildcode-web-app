@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary role of HTML in a web page?",
+      "options": ["Styling content", "Structuring content", "Handling server requests", "Storing data"],
+      "answer": "Structuring content"
+    },
+    {
+      "id": 2,
+      "question": "Which HTML element is used for the most important heading on a page?",
+      "options": ["<h6>", "<header>", "<h1>", "<title>"],
+      "answer": "<h1>"
+    },
+    {
+      "id": 3,
+      "question": "What is the benefit of using semantic HTML elements?",
+      "options": ["They reduce file size", "They improve meaning and accessibility", "They replace JavaScript", "They add animations"],
+      "answer": "They improve meaning and accessibility"
+    },
+    {
+      "id": 4,
+      "question": "What does CSS primarily control in a web page?",
+      "options": ["Structure", "Behaviour", "Styling and layout", "Data storage"],
+      "answer": "Styling and layout"
+    },
+    {
+      "id": 5,
+      "question": "Which CSS property is used to change the text colour?",
+      "options": ["font-style", "color", "text-decoration", "background"],
+      "answer": "color"
+    },
+    {
+      "id": 6,
+      "question": "In the CSS box model, what does 'margin' represent?",
+      "options": ["Space inside the element", "Space outside the element", "Border thickness", "Text spacing"],
+      "answer": "Space outside the element"
+    },
+    {
+      "id": 7,
+      "question": "What does JavaScript mainly add to a web page?",
+      "options": ["Structure", "Design only", "Interactivity and behaviour", "Database storage"],
+      "answer": "Interactivity and behaviour"
+    },
+    {
+      "id": 8,
+      "question": "Which keyword is commonly recommended for declaring variables in modern JavaScript?",
+      "options": ["var", "let", "define", "new"],
+      "answer": "let"
+    },
+    {
+      "id": 9,
+      "question": "What is the difference between '==' and '===' in JavaScript?",
+      "options": ["No difference", "=== checks both value and type", "== is stricter", "=== ignores type"],
+      "answer": "=== checks both value and type"
+    },
+    {
+      "id": 10,
+      "question": "What does the DOM represent in web development?",
+      "options": ["A styling system", "A tree structure of the page", "A database", "A server connection"],
+      "answer": "A tree structure of the page"
+    },
+    {
+      "id": 11,
+      "question": "Which method selects the first matching element using a CSS selector?",
+      "options": ["getElementById()", "querySelector()", "getElementsByClassName()", "selectOne()"],
+      "answer": "querySelector()"
+    },
+    {
+      "id": 12,
+      "question": "What does appendChild() do?",
+      "options": ["Deletes an element", "Adds a new child element", "Styles an element", "Fetches data"],
+      "answer": "Adds a new child element"
+    },
+    {
+      "id": 13,
+      "question": "Which method is used to attach an event like a click to an element?",
+      "options": ["addEventListener()", "onClickOnly()", "triggerEvent()", "eventBind()"],
+      "answer": "addEventListener()"
+    },
+    {
+      "id": 14,
+      "question": "What is local storage used for?",
+      "options": ["Hosting websites", "Saving small data in the browser", "Running JavaScript", "Styling elements"],
+      "answer": "Saving small data in the browser"
+    },
+    {
+      "id": 15,
+      "question": "What is the main advantage of responsive design?",
+      "options": ["Faster loading", "Works on different screen sizes", "Adds animations", "Stores user data"],
+      "answer": "Works on different screen sizes"
+    },
+    {
+      "id": 16,
+      "question": "How many columns are used in Bootstrap’s grid system?",
+      "options": ["8", "10", "12", "16"],
+      "answer": "12"
+    },
+    {
+      "id": 17,
+      "question": "What is the purpose of a Bootstrap 'row'?",
+      "options": ["Apply colors", "Group columns in layout", "Handle events", "Store data"],
+      "answer": "Group columns in layout"
+    },
+    {
+      "id": 18,
+      "question": "What does the fetch() function do?",
+      "options": ["Styles a page", "Sends and retrieves data asynchronously", "Creates HTML elements", "Stores data locally"],
+      "answer": "Sends and retrieves data asynchronously"
+    },
+    {
+      "id": 19,
+      "question": "Why is AJAX or fetch useful in web applications?",
+      "options": ["Reloads pages faster", "Loads data without refreshing the page", "Replaces CSS", "Builds layouts"],
+      "answer": "Loads data without refreshing the page"
+    },
+    {
+      "id": 20,
+      "question": "What is a key idea in Agile development?",
+      "options": ["One final delivery only", "Working in small iterations", "No planning required", "Avoid user feedback"],
+      "answer": "Working in small iterations"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuildCode | Quiz</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">GuildCode</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Tutorial</a></li>
+            <li class="nav-item"><a class="nav-link active" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="ai-reflection.html">AI Reflection</a></li>
+            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+            <li class="nav-item">
+              <div class="theme-switch d-flex align-items-center gap-2 ms-lg-3">
+                <div class="form-check form-switch mb-0">
+                  <input class="form-check-input" type="checkbox" id="themeToggle">
+                  <label class="form-check-label" for="themeToggle">Dark mode</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="section-heading mb-4">
+        <span class="eyebrow">QUIZ PAGE</span>
+        <h1 class="fw-bold mt-2">Test your HTML, CSS and JavaScript knowledge</h1>
+        <p class="text-secondary mb-0">Pass mark: <strong>70%</strong>. Your attempts are saved automatically in local storage.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <section class="content-card">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <h2 class="h4 mb-0">Quiz Questions</h2>
+              <span id="quizStatus" class="status-pill">Loading questions...</span>
+            </div>
+
+            <div id="quizError" class="alert alert-danger d-none" role="alert"></div>
+            <form id="quizForm" novalidate>
+              <div id="quizContainer"></div>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <button id="submitQuiz" type="submit" class="btn btn-brand">Submit quiz</button>
+                <button id="reloadQuiz" type="button" class="btn btn-outline-brand">Reload shuffled quiz</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <div class="col-lg-4">
+          <section class="content-card mb-4">
+            <h2 class="h4">Current result</h2>
+            <div id="resultBox" class="result-box mt-3">
+              <p class="text-secondary mb-0">Submit the quiz to see your score, percentage and pass/fail result.</p>
+            </div>
+            <div id="rewardBox" class="reward-box d-none mt-3"></div>
+          </section>
+
+          <section class="content-card">
+            <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+              <h2 class="h4 mb-0">Attempt history</h2>
+              <button id="clearHistory" type="button" class="btn btn-sm btn-outline-danger">Clear history</button>
+            </div>
+            <div id="historyList" class="mt-3"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">GuildCode - Quiz and progress tracking</p>
+      <p class="mb-0">Questions loaded from a local JSON file</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

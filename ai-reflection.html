@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuildCode | AI Reflection</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-soft ai-page">
+  <header class="site-header sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand fw-bold" href="index.html">GuildCode</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Tutorial</a></li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link active" href="ai-reflection.html">AI Reflection</a></li>
+            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+
+            <li class="nav-item">
+              <div class="form-check form-switch theme-switch ms-lg-2 mb-0">
+                <input class="form-check-input" type="checkbox" id="pageThemeToggle">
+                <label class="form-check-label" for="pageThemeToggle">Dark mode</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container-fluid ai-layout px-4 px-lg-5">
+      <div class="section-heading mb-4">
+        <span class="eyebrow">24732787</span>
+        <h1 class="fw-bold mt-2">AI Reflection Log</h1>
+        <p class="text-secondary mb-0">
+          This page critically documents how AI tools were used during development, what outputs were produced,
+          what I changed afterwards, and what limitations, risks and ethical concerns I identified.
+        </p>
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        <span class="status-pill">3 specific AI use cases documented</span>
+        <span class="status-pill">Dark mode issue critically evaluated</span>
+        <span class="status-pill">Prompts, outputs and changes fully explained</span>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <article class="content-card mb-4">
+  <h2 class="h3 mb-3">Use case 1: Fixing the dark mode toggle across pages</h2>
+  <p class="text-secondary">This was one of the most useful but also most frustrating parts of the project.</p>
+
+  <p><strong>Prompt used:</strong><br>
+    “My dark mode toggle works on one page but not on the others. How can I make the theme stay consistent across all pages?”
+  </p>
+
+  <p><strong>AI output summary:</strong><br>
+    ChatGPT suggested using JavaScript with <code>localStorage</code> to save the theme and applying a shared class such as <code>dark-page</code> to the <code>body</code> element on every page. It also suggested using the same toggle ID and reusing the same script file across the site.
+  </p>
+
+  <p><strong>Changes I made:</strong><br>
+    I did not use the response exactly as it was given. I adapted the code to match my own page structure, my existing CSS classes and my file setup. I connected the toggle through <code>main.js</code>, reused the same theme key in local storage, and added dark mode CSS for cards, text, navigation and form elements. I also had to correct some page-specific styling because simply adding the toggle logic did not make the whole design switch properly.
+  </p>
+
+  <p><strong>What limitation I noticed:</strong><br>
+    The first answers looked correct, but they were not complete for my project. Even after adding the suggested code, the toggle either did not work on some pages, did not carry over correctly, or changed only part of the page. In some cases the container styling remained light while the background changed dark, which made the design look broken.
+  </p>
+
+  <p class="mb-0"><strong>Critical evaluation:</strong><br>
+    One part of the AI output was subtly incorrect because it assumed that applying a single dark-page class would automatically update all components. While this sounded correct, it did not account for my existing page-specific CSS, which caused inconsistent styling across pages. I identified this issue when some elements remained in light mode even though the background changed, which required manual CSS adjustments.
+  </p>
+</article>
+
+<article class="content-card mb-4">
+  <h2 class="h3 mb-3">Use case 2: Troubleshooting the live preview card</h2>
+  <p class="text-secondary">This was an example where AI helped me think through the problem, but not every suggestion solved it immediately.</p>
+
+  <p><strong>Prompt used:</strong><br>
+    “Why are the changes I make not appearing properly in the live preview card, and what should I check?”
+  </p>
+
+  <p><strong>AI output summary:</strong><br>
+    ChatGPT suggested checking whether the correct selectors were being targeted, whether the JavaScript was updating the right HTML elements, and whether the preview area needed better structure or event handling. It also suggested that I review my CSS and content containers to make sure the updates were visible.
+  </p>
+
+  <p><strong>Changes I made:</strong><br>
+    I used the response as a guide, but I had to inspect my own HTML, CSS and JavaScript closely. I adjusted the layout structure, checked whether the correct elements were being selected, and refined the preview section so that updates were actually visible on screen instead of only changing the code behind the scenes.
+  </p>
+
+  <p><strong>What limitation I noticed:</strong><br>
+    The AI suggestions were useful for troubleshooting, but they were broad. They did not immediately identify the exact problem in my page. I still had to test each part myself and compare the visual output with the expected behaviour.
+  </p>
+
+  <p class="mb-0"><strong>Critical evaluation:</strong><br>
+    A subtle limitation in the AI response was that it provided general debugging steps rather than identifying the exact issue. The suggestions appeared correct, but they did not directly resolve the problem because they were not specific to my DOM structure. I realised this when applying the suggestions did not fix the preview, which required deeper inspection of my own code.
+  </p>
+</article>
+
+<article class="content-card mb-4">
+  <h2 class="h3 mb-3">Use case 3: Making the quiz shuffle properly on page load</h2>
+  <p class="text-secondary">This was useful because the quiz needed to feel interactive rather than static.</p>
+
+  <p><strong>Prompt used:</strong><br>
+    “My quiz questions are staying in the same order even though I want them to shuffle each time the page loads. How can I fix that while still using my JSON questions?”
+  </p>
+
+  <p><strong>AI output summary:</strong><br>
+    ChatGPT suggested shuffling the array before rendering the questions, rather than changing the original JSON file itself. It explained that the JSON should remain as the source data, while the displayed question order should be randomised in JavaScript at runtime.
+  </p>
+
+  <p><strong>Changes I made:</strong><br>
+    I kept the original question structure in JSON, but adapted the rendering logic so the displayed order changed on load. I had to make sure the shuffled version still matched the rest of the quiz logic and did not break validation or answer handling.
+  </p>
+
+  <p><strong>What limitation I noticed:</strong><br>
+    Although the AI explained the concept clearly, the code still needed adjustment to fit my actual quiz setup. The first version did not fully align with the structure I was already using.
+  </p>
+
+  <p class="mb-0"><strong>Critical evaluation:</strong><br>
+    The AI response was subtly incorrect in that the initial code example did not fully match my existing quiz structure, even though the logic was valid. It appeared usable at first, but caused issues with validation when implemented directly. I detected this when the quiz behaviour broke after integration, which required modifying the code to fit my setup.
+  </p>
+</article>
+
+<article class="content-card">
+  <h2 class="h3 mb-3">Reliability, risks and ethical considerations</h2>
+
+  <p>
+    Across this project, ChatGPT was useful for debugging, planning and suggesting implementation approaches, especially when I was stuck on dark mode, quiz behaviour and interactive components. However, the responses were not always directly usable. In multiple cases, the suggestions sounded correct but still required adaptation before they worked properly in my own code.
+  </p>
+
+  <p>
+    A major risk was assuming that because the answer looked professional, it must also be fully correct. My experience showed that AI can be helpful without being complete. The most common issue was not an obviously wrong answer, but a partially correct one that still caused layout issues, inconsistent behaviour or missing styling.
+  </p>
+
+  <p>
+    There were also ethical considerations. I needed to acknowledge AI assistance clearly, avoid copying outputs without understanding them, and make sure the final work still reflected my own judgement and testing. For that reason, I treated ChatGPT as a support tool rather than a substitute for learning or problem-solving.
+  </p>
+
+  <p class="mb-0">
+    Overall, the most important lesson was that AI improved my efficiency, but responsibility for correctness stayed with me. The final quality of the website depended not on the generated code alone, but on my ability to test, evaluate, modify and justify the decisions I made.
+  </p>
+</article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">GuildCode - Reflective and critical use of AI</p>
+      <p class="mb-0">AI used as support, not as a substitute for judgement</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
